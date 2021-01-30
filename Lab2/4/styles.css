@@ -1,0 +1,54 @@
+.left {
+    background-color: #ffffff;
+    padding: 20px;
+    float: left;
+    width: 40%;
+}
+
+.cvphoto {
+    background-color: #ffffff;
+    padding: 20px;
+    float: left;
+    width: 30%;
+}
+
+.right {
+    background-color: #ffffff;
+    padding: 20px;
+    float: left;
+    width: 30%;
+}
+
+.font {
+    font-family: 'Kanit', sans-serif;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.box p {
+    text-align: center;
+    color: #ffffff;
+    background: #aaaaaa;
+    padding: 4px;
+    box-sizing: border-box;
+    margin: 4px;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: #dddddd;
+    color: #000000;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+}

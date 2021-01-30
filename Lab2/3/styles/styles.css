@@ -1,0 +1,41 @@
+.left {
+    background-color: #ffffff;
+    padding: 20px;
+    float: left;
+    width: 40%;
+}
+
+.cvphoto {
+    background-color: #ffffff;
+    padding: 20px;
+    float: left;
+    width: 30%;
+}
+
+.right {
+    background-color: #ffffff;
+    padding: 20px;
+    float: left;
+    width: 30%;
+}
+
+.font {
+    font-family: 'Kanit', sans-serif;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: #dddddd;
+    color: #000000;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+}

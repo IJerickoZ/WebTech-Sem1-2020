@@ -1,0 +1,24 @@
+.left {
+    background-color: #ffffff;
+    padding: 20px;
+    float: left;
+    width: 40%;
+}
+
+.cvphoto {
+    background-color: #ffffff;
+    padding: 20px;
+    float: left;
+    width: 30%;
+}
+
+.right {
+    background-color: #ffffff;
+    padding: 20px;
+    float: left;
+    width: 30%;
+}
+
+.font {
+    font-family: 'Kanit', sans-serif;
+}
