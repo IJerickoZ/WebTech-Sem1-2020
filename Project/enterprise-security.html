@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android Enterprise Security | Android</title>
+    <link rel="icon" href="files/images/logos/Android_cut.png" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="files/css/enterprise/security.css">
+
+    <!-- GSAP link-->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- jQuery and JS bundle w/ Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        .sticky-top {
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body style="overflow-x: hidden;">
+    <!-- start nav -->
+    <link rel="stylesheet" href="files/css/nav/nav.css">
+    <div class="pos-f-t sticky-top" id="b" style="transform: translateY(-6px);">
+        <div class="sticky-top" style="height: 1px; top: -45px; position: relative; z-index: 3;" id="mProgress2"></div>
+        <div class="sticky-top" id="nav-point-2" style="width: 4.2%; left: 1428px;"></div>
+        <nav class="navbar navbar-expand-sm sticky-top nav-animate" id="nav-animate" style="z-index: 2; background-color: white;">
+            
+            <div style="height: 40px; width: 200px; overflow: hidden; position: relative; left: 16%;" >
+                <a class="navbar-brand" href="index.html" style="margin-left: 18%; top: 55px; position: relative;"
+                    onclick="bar4()">
+                    <!-- logo homepage -->
+                    <svg style="position:absolute;width:120px;;margin-top:-65px">
+                        <use xlink:href="#android-logo"></use>
+                    </svg>
+                    <svg style="position:absolute;width:120px;fill:#3dda84;margin-top:-65px">
+                        <use xlink:href="#andy"></use>
+                    </svg>
+                </a>
+            </div>
+            <ul class="navbar-nav" style="left: 960px;">
+                <li class="nav-item" id="nav1" style="top: -45px; position: relative;">
+                    <a class="nav-link" href="what-is-final.html" style="position: relative;left: -155px;" onclick="bar4(1)">What is Android</a>
+                </li>
+                <li class="nav-item" id="nav2">
+                    <a class="nav-link" href="android11.html" style="position: relative;top: -45px ;left: -155px;" onclick="bar4(2)">Android 11</a>
+                </li>
+                <li class="nav-item" id="nav3" style="position: relative;left: -190px;top: -45px;">
+                    <a class="nav-link" href="phone&tablet.html" onclick="bar4(3)">Phones & Tablets</a>
+                </li>
+                <li class="nav-item " id="nav4" style="position: relative;left: -180px; top: -45px;">
+                    <a class="nav-link" href="enterprise-overview.html" onclick="bar4(4)">Enterprise</a>
+                </li>
+                <li class="nav-item" id="nav5" style="top: -45px; position: relative;">
+                    <a class="navlink" href="#">
+                        <svg id="ico-search" viewBox="0 0 24 24" width="18%" style="position:relative; left: -225px; top: 5px">
+                            <g fill="none" fill-rule="evenodd">
+                            <path d="M0 0h24v24H0z"></path>
+                            <path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="currentColor"></path>
+                            </g>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="mt-1 mb-2" style="height: 1px; position: relative; left: -40px;" id="mProgress"></div>
+        <div id="nav-point-1" style="width: 3.7%;    left: 890px;"></div>
+
+        <nav class="navbar navbar-expand-sm sticky-top" id="subnav" style="z-index: 0;">
+            <div id="bg-nav" style="width: 100%; height: 80px; background-color: white; position: absolute; left: 0px;"> 
+                <ul class="navbar-nav">
+                    <li class="nav-item" id="sub1" style="position: relative;left: 30px;">
+                        <a class="nav-link" href="enterprise-overview.html" onclick="bar_en(0)">Overview</a>
+                    </li>
+                    <li class="nav-item dropdown" id="sub2">
+                        <a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Solution
+                        </a>
+                        <div class="dropdown-menu" onclick="bar_en(1)" aria-labelledby="navbarDropdown1" style="position: absolute; left: -15px; border: none; transition-timing-function: ease;">
+                            <a class="dropdown-item" href="enterprise-security.html">Security</a>
+                            <a class="dropdown-item" href="managment.html">Management</a>
+                            <a class="dropdown-item" href="enterprise-enrollment.html">Enrollment</a>
+                            <a class="dropdown-item" href="Enterprise-solution-Employee.html">Employees</a>
+                        </div>
+                    </li>
+                    <li class="nav-item" id="sub3" style="position: relative;left: -45px;">
+                        <a class="nav-link" href="enterprise-recommend.html" onclick="bar_en(2)">Recommended</a>
+                    </li>
+                    <li class="nav-item " id="sub4" style="position: relative;left: -50px;">
+                        <a class="nav-link" href="Enterprise-device.html" onclick="bar_en(3)">Devices</a>
+                    </li>
+                    <li class="nav-item dropdown2" id="sub5" style="position: relative;left: -100px;">
+                        <a class="nav-link" href="#" id="navbarDropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support</a>
+                        <div class="dropdown-menu" id="certdropdown" onclick="bar_en(4)" aria-labelledby="navbarDropdown2" style="position: absolute; left: -15px; border: none;">
+                            <a class="dropdown-item" href="enterprise-support.html">Resources</a>
+                            <a class="dropdown-item" href="#">Help Center</a>
+                            <a class="dropdown-item" href="#">Solutions Directory</a>
+                            <a class="dropdown-item" href="#">Help Community</a>
+                        </div>
+                    </li>
+                    <li class="nav-item " id="sub6" style="position: relative;left: -150px;">
+                        <a class="nav-link" href="for-partner.html" onclick="bar_en(5)">For Partners</a>
+                    </li>
+                    <li class="nav-item " id="sub7" style="position: relative;left: -170px;">
+                        <button class="btn nav-link nav-but" href="#" onclick="bar_en()">GET STARTED</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("b").style = "top:-6px; transition: 0.5s;";
+                document.getElementById("nav-point-1").style.top = "-53px";
+                document.getElementById("mProgress").style.top = "-45px";
+                document.getElementById("nav-point-2").style.top = "-40px";
+                document.getElementById("mProgress2").style.top = "-45px";
+            } else {
+                document.getElementById("b").style = "top:-85px; transition: 0.2s;";
+                document.getElementById("nav-point-1").style.top = "-50px";
+                document.getElementById("mProgress").style.top = "-43px";
+                document.getElementById("nav-point-2").style.top = "-45px";
+                document.getElementById("mProgress2").style.top = "-43px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
+    <script src="files/js/nav/nav.js"></script>
+    <!-- end nav -->
+    <section class="section stage1">
+        <div class="row font-android">
+            <div class="col-4 pl-7" style="margin-top: 200px;">
+                <div class="shape-pills-st1"></div>
+                <div id="text-st1">
+                    <h5>Security</h5>
+                    <h1 class="mt-2" style="color: white;font-size: 88px;">Best-in-class device and data protection.
+                    </h1>
+                </div>
+
+            </div>
+            <div class="col-5" style="margin-top: 70px;">
+                <img id="img-st1" style="width: 706px;" src="files/images/enterprise-security/st1-bg-1.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="section stage2">
+        <div class="container">
+            <div class="row">
+                <div class="col-6" style="padding-right: 150px; margin-top: 120px;">
+                    <svg id="ico-defense-in-depth" viewBox="0 0 36 44" style="width:40px">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(-195.000000, -1042.000000)">
+                                <g transform="translate(0.000000, 880.000000)">
+                                    <g transform="translate(189.000000, 160.000000)">
+                                        <g>
+                                            <g>
+                                                <g>
+                                                    <g>
+                                                        <g stroke-width="1" transform="translate(6.000000, 2.000000)">
+
+                                                            <use fill="#FFFFFF" xlink:href="#path-1">
+                                                                <path
+                                                                    d="M16.38,0.5325 C17.4,0.0725 18.6,0.0725 19.62,0.5325 L19.62,0.5325 L33.62,6.7525 C35.06,7.3925 36,8.8325 36,10.4125 L36,10.4125 L36,19.8125 C36,30.9125 28.32,41.2925 18,43.8125 C7.68,41.2925 0,30.9125 0,19.8125 L0,19.8125 L0,10.4125 C0,8.8325 0.94,7.3925 2.38,6.7525 L2.38,6.7525 Z M18,4.1925 L4,10.4125 L4,21.8125 L18,21.8125 L18,39.6725 C25.44,37.3725 30.94,30.0325 32,21.7925 L32,21.7925 L18,21.7925 L18,4.1925 Z"
+                                                                    id="path-1"></path>
+                                                            </use>
+                                                        </g>
+                                                        <path
+                                                            d="M24,23.7925 L38,23.7925 C36.94,32.0325 31.44,39.3725 24,41.6725 L24,23.8125 L10,23.8125 L10,12.4125 L24,6.1925 L24,23.7925 Z"
+                                                            id="Path" fill="#3DDC84"
+                                                            transform="translate(24.000000, 23.932500) scale(-1, 1) translate(-24.000000, -23.932500) ">
+                                                        </path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+
+                    <h1 class="mt-2 text-topic font-android mb-5">Defense in depth.</h1>
+                    <p class="text-p font-roboto mb-4">Each layer of defense works together to make the whole ecosystem stronger. We start by building a secure OS, and making sure device makers meet our strict hardware standards.
+                    </p>
+                    <p class="text-p font-roboto">Then, we add security services on top to prevent leaks and hacks. And finally, we give you control over the entire fleet of devices. Because a wall is good. But a fortress is better.</p>
+                    <div class="row learnMore" style="width: 500px;height: 50px;left: 15px;position: relative;">
+                        <p class=" d-flex" class="card-text" style="color: white;font-size: 1.25rem;">
+                            <b>Read the security white paper</b>
+                        </p>
+                        <svg id="arrow-to-top" style="transform: rotate(30deg);position:relative;top:-10px" width="30px" viewBox="0 0 16 16" class="bi bi-arrow-up-short" fill="white" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="col-6" style="margin-top: 100px;">
+                    <img style="z-index: 5;position: relative;" width="626" src="files/images/enterprise-security/st2-bg-1.png" alt="">
+                    <div style="z-index: 1;" class="shape-pills-st2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section stage3">
+        <div class="container">
+            <div class="row">
+                <div class="col-6" style="padding-right: 150px; margin-top: 120px;">
+                    <svg id="ico-defense-in-depth" viewBox="0 0 36 44" style="width:40px">
+                        <g fill="none">
+                            <use fill="#4285F4" xlink:href="#aa">
+                                <path
+                                    d="M29.481 0h-19.09a3.83 3.83 0 0 0-3.819 3.818v3.818c0 1.05.86 1.91 1.91 1.91 1.05 0 1.908-.86 1.908-1.91V5.727h19.091v30.546h-19.09v-1.91c0-1.05-.86-1.908-1.91-1.908-1.05 0-1.909.859-1.909 1.909v3.818A3.83 3.83 0 0 0 10.39 42h19.091a3.83 3.83 0 0 0 3.818-3.818V3.818A3.83 3.83 0 0 0 29.481 0z"
+                                    id="aa"></path>
+                            </use>
+                            <path
+                                d="M6.591 23.806l-3.665-3.665a1.717 1.717 0 0 0-2.425 0 1.717 1.717 0 0 0 0 2.424l4.716 4.716a1.901 1.901 0 0 0 2.691 0l11.169-11.168a1.717 1.717 0 0 0 0-2.425 1.717 1.717 0 0 0-2.425 0L6.592 23.806z"
+                                fill="#3DDC84"></path>
+                        </g>
+                    </svg>
+                    <h1 class="mt-2 text-topic font-android pb-5">Device protection.</h1>
+                    <p class="text-p font-roboto"><b>Built-in security that blocks threats.</b>
+                    </p>
+                    <p class="text-p font-roboto">Android devices come with security already built in. To start, security functions run in a trusted execution environment (TEE) to make sure the OS stays safe. Like protected lock screen and data encryption. And sandboxing to keep apps
+                        separate and data clean. It’s always on and always running. Just boot up and start working.</p>
+                </div>
+                <div class="col-6" style="margin-top: 100px;">
+                    <img id="img-st3" style="position: absolute; z-index: 10; left: 330px; top:400px" width="125" src="files/images/enterprise-security/st3-bg-2.png"
+                        alt="">
+                    <img style="z-index: 5;position: relative;left: 100px;" width="278" src="files/images/enterprise-security/st3-bg-1.png" alt="">
+                    <div style="z-index: 1;" class="shape-circle-st3"></div>
+                </div>
+            </div>
+            <div class="row" style="margin-top:50px">
+                <p class="font-android font-bold" style="font-size: 32px;padding-left: 15px;">Highlights</p>
+            </div>
+            <div class="row font-weight-bold">
+                <div class="col-4 d-flex">
+                    <svg id="material-done" viewBox="0 0 24 24" fill="#3ddc84" width="50" style="margin-right: 10px;position:relative;top:-50px">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path>
+                    </svg>
+                    <p class="text-p font-roboto " style="padding-right: 80px;">Verified boot alerts you to OS compromises when you start up.</p>
+                </div>
+                <div class="col-4 d-flex">
+                    <svg id="material-done" viewBox="0 0 24 24" fill="#3ddc84" width="50" style="margin-right: 10px;position:relative;top:-50px">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path>
+                    </svg>
+                    <p class="text-p font-roboto " style="padding-right: 80px;">Anti-exploitation techniques prevent vulnerabilities from becoming exploitable.
+                    </p>
+                </div>
+                <div class="col-4 d-flex">
+                    <svg id="material-done" viewBox="0 0 24 24" fill="#3ddc84" width="50" style="margin-right: 10px;position:relative;top:-50px">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path>
+                    </svg>
+                    <p class="text-p font-roboto" style="padding-right: 80px;">Critical security functions happen in the TEE separate from the OS.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section stage4">
+        <div class="container">
+            <div class="row">
+                <div class="col-6" style="margin-top: 100px;">
+                    <img id="img-st4" style="position: absolute; z-index: 10; left: 80px; top:120px;box-shadow: 0 10px 15px rgba(0,0,0,0.3);" width="350S" src="files/images/enterprise-security/st4-bg-2.webp"
+                        alt="">
+                    <img style="z-index: 5;position: relative;left: 100px;" width="278" src="files/images/enterprise-security/st4-bg-1.webp" alt="">
+                    <div style="z-index: 1;" class="shape-circle-st4"></div>
+                </div>
+                <div class="col-6" style="padding-right: 130px; margin-top: 120px; left:100px;top:-100px">
+                    <svg class="icon--svg content-multimedia__icon-image" aria-hidden="true" style="width:40px">
+                        <use xlink:href="#ico-security-services">
+                            <svg id="ico-security-services" viewBox="0 0 24 34">
+                                <g fill="none" fill-rule="evenodd">
+                                    <path
+                                        d="M4.564 14h14.872c.892 0 1.215.093 1.54.267.327.174.583.43.757.756.174.326.267.65.267 1.54v12.873c0 .892-.093 1.215-.267 1.54-.174.327-.43.583-.756.757-.326.174-.65.267-1.54.267H4.563c-.892 0-1.215-.093-1.54-.267a1.817 1.817 0 01-.757-.756c-.174-.326-.267-.65-.267-1.54V16.563c0-.892.093-1.215.267-1.54.174-.327.43-.583.756-.757.326-.174.65-.267 1.54-.267z"
+                                        stroke="#4285F4" stroke-width="4"></path>
+                                    <path d="M12 20c-1.65 0-3 1.35-3 3s1.35 3 3 3 3-1.35 3-3-1.35-3-3-3z" fill="#3DDC84"
+                                        fill-rule="nonzero"></path>
+                                    <path
+                                        d="M21.5 13V9.286C21.5 4.16 17.244 0 12 0S2.5 4.16 2.5 9.286V13h3.61V9.286c0-3.176 2.641-5.757 5.89-5.757 3.249 0 5.89 2.581 5.89 5.757V13h3.61z"
+                                        fill="#4285F4"></path>
+                                </g>
+                            </svg>
+                    </use>
+                    </svg>
+                    <h1 class=" text-topic font-android mb-5" style="top:-100px;">Google security services.</h1>
+                    <p class="text-p font-roboto"><b>Shield company data and employee privacy.</b>
+                    </p>
+                    <p class="text-p font-roboto">Employees can use their devices without putting the whole business at risk. Download apps without downloading threats. Change settings without threatening security. User data is protected and company data is kept private. It’s a one-two
+                        punch: protected hardware, plus an extra layer of risk mitigation.</p>
+                </div>
+            </div>
+            <div class="row">
+                <p class="font-android font-bold" style="font-size: 32px;padding-left: 15px;">Highlights</p>
+            </div>
+            <div class="row font-weight-bold">
+                <div class="col-4 d-flex">
+                    <svg id="material-done" viewBox="0 0 24 24" fill="#3ddc84" width="50" style="margin-right: 10px;position:relative;top:-25px">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path>
+                    </svg>
+                    <p class="text-p font-roboto ">Google Play Protect detects and blocks malware threats.</p>
+                </div>
+                <div class="col-4 d-flex">
+                    <svg id="material-done" viewBox="0 0 24 24" fill="#3ddc84" width="50" style="margin-right: 10px;position:relative;top:-25px">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path>
+                    </svg>
+                    <p class="text-p font-roboto ">Google safe browsing protects you from malware and phishing.</p>
+                </div>
+                <div class="col-4 d-flex">
+                    <svg id="material-done" viewBox="0 0 24 24" fill="#3ddc84" width="50" style="margin-right: 10px;position:relative;top:-25px">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path>
+                    </svg>
+                    <p class="text-p font-roboto ">SafetyNet API checks devices before they can access data.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section stage5">
+        <div class="container">
+            <div class="row">
+                <div class="col-6" style="padding-right: 150px; margin-top: 120px;">
+                    <svg id="ico-defense-in-depth" viewBox="0 0 36 44" style="width:40px">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(-7.000000, -8.000000)">
+                                <path fill="currentColor" fill-rule="nonzero"
+                                    d="M27.4,14.8 L27.4,11.4 L20.6,11.4 L20.6,14.8 L27.4,14.8 Z M10.4,19.9 L10.4,35.2 C10.4,36.135 11.165,36.9 12.1,36.9 L35.9,36.9 C36.835,36.9 37.6,36.135 37.6,35.2 L37.6,19.9 C37.6,18.965 36.835,18.2 35.9,18.2 L12.1,18.2 C11.165,18.2 10.4,18.965 10.4,19.9 Z M37.6,14.8 C39.487,14.8 41,16.313 41,18.2 L41,36.9 C41,38.787 39.487,40.3 37.6,40.3 L10.4,40.3 C8.513,40.3 7,38.787 7,36.9 L7.017,18.2 C7.017,16.313 8.513,14.8 10.4,14.8 L17.2,14.8 L17.2,11.4 C17.2,9.513 18.713,8 20.6,8 L27.4,8 C29.287,8 30.8,9.513 30.8,11.4 L30.8,14.8 L37.6,14.8 Z"
+                                    id="path-1"></path>
+                            </g>
+                        </g>
+                    </svg>
+                    <h1 class="mt-2 text-topic font-android mb-5">Enterprise controls.</h1>
+                    <p class="text-p font-roboto"><b>Keep all devices secure and compliant.</b>
+                    </p>
+                    <p class="text-p font-roboto">Android puts you in control of every device in your fleet at once. Deploy devices and configure settings the way you want. Distribute only the apps your employees should use. Even set up separate profiles to keep work data away from
+                        personal data.</p>
+                </div>
+                <div class="col-6" style="margin-top: 100px;">
+                    <img style="z-index: 5;position: relative;" width="626" src="files/images/enterprise-security/st5-bg-1.webp" alt="">
+                    <div style="z-index: 1;" class="shape-pills-st5"></div>
+                </div>
+            </div>
+            <div class="row">
+                <p class="font-android font-bold" style="font-size: 32px;padding-left: 15px;">Highlights</p>
+            </div>
+            <div class="row">
+                <div class="col-4 d-flex">
+                    <svg id="material-done" viewBox="0 0 24 24" fill="white" width="50" style="margin-right: 10px;position:relative;top:-40px">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path>
+                    </svg>
+                    <p class="text-p font-roboto ">Deploy devices to enforce compliance across the business.</p>
+                </div>
+                <div class="col-4 d-flex">
+                    <svg id="material-done" viewBox="0 0 24 24" fill="white" width="50" style="margin-right: 10px;position:relative;top:-40px">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path>
+                    </svg>
+                    <p class="text-p font-roboto " style="padding-right: 80px;">Distribute and configure apps safely with managed Google Play.</p>
+                </div>
+                <div class="col-4 d-flex">
+                    <svg id="material-done" viewBox="0 0 24 24" fill="white" width="50" style="margin-right: 10px;position:relative;top:-40px">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path>
+                    </svg>
+                    <p class="text-p font-roboto ">Work profile prevents leaks between personal and company data.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section stage6">
+        <div class="row">
+            <div class="shape-circle-st6"></div>
+            <div class="col-3 pl-7" style="padding-right: 10px; margin-top: 120px;margin-right: 100px">
+                <h1 class="mt-2 text-topic font-android mb-5">How our security stacks up.</h1>
+                <p class="text-p font-roboto" style="padding-right: 50px;">We’ve been vetted by the best. Our security features and services meet regulatory certifications and industry standards and are validated by independent analysts and researchers. That’s good news for the safety of your business.
+                </p>
+            </div>
+            <div class="col-3" style="margin-top: 100px;padding-right: 200px;">
+                <div class="row mt-5">
+                    <svg id="material-done" viewBox="0 0 24 24" fill="#3ddc84" width="20" style="margin-right: 10px;position:relative;top:0px">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path>
+                    </svg>
+                    <p class="text-p font-weight-bold" style="font-size: 16px;">ISO 27001 Certification</p>
+                    <p class="text-p" style="font-size: 16px;padding-left: 30px;">Android Enterprise information security practices meet ISO’s strict industry standards.</p>
+                    <div class="row learnMore" style="width: 140px;height: 50px;left: 45px;position: relative;">
+                        <p class=" d-flex" class="card-text" style="color: #073042;font-size: 1.25rem;">
+                            <b>Learn more</b>
+                        </p>
+                        <svg id="arrow-to-top" style="transform: rotate(30deg);position:relative;top:-10px" width="30px" viewBox="0 0 16 16" class="bi bi-arrow-up-short" fill=" #073042" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <svg id="material-done" viewBox="0 0 24 24" fill="#3ddc84" width="20" style="margin-right: 10px;position:relative;top:0px">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path>
+                    </svg>
+                    <p class="text-p font-weight-bold" style="font-size: 16px;">FIPS 140-2 CAVP</p>
+                    <p class="text-p" style="font-size: 16px;padding-left: 30px;">Federal Information Processing Standards validates Android cryptographic security systems.</p>
+                    <div class="row learnMore" style="width: 140px;height: 50px;left: 45px;position: relative;">
+                        <p class=" d-flex" class="card-text" style="color: #073042;font-size: 1.25rem;">
+                            <b>Learn more</b>
+                        </p>
+                        <svg id="arrow-to-top" style="transform: rotate(30deg);position:relative;top:-10px" width="30px" viewBox="0 0 16 16" class="bi bi-arrow-up-short" fill=" #073042" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <svg id="material-done" viewBox="0 0 24 24" fill="#3ddc84" width="20" style="margin-right: 10px;position:relative;top:0px">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path>
+                    </svg>
+                    <p class="text-p font-weight-bold" style="font-size: 16px;">Gartner</p>
+                    <p class="text-p" style="font-size: 16px;padding-left: 30px;">Android 9 scored the highest rating in 26 of 30 security categories in 2019.</p>
+                    <div class="row learnMore" style="width: 140px;height: 50px;left: 45px;position: relative;">
+                        <p class=" d-flex" class="card-text" style="color: #073042;font-size: 1.25rem;">
+                            <b>Learn more</b>
+                        </p>
+                        <svg id="arrow-to-top" style="transform: rotate(30deg);position:relative;top:-10px" width="30px" viewBox="0 0 16 16" class="bi bi-arrow-up-short" fill=" #073042" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3" style="margin-top: 100px;padding-right: 200px;">
+                <div class="row mt-5">
+                    <svg id="material-done" viewBox="0 0 24 24" fill="#3ddc84" width="20" style="margin-right: 10px;position:relative;top:0px">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path>
+                    </svg>
+                    <p class="text-p font-weight-bold" style="font-size: 16px;">FIDO2 Certification</p>
+                    <p class="text-p" style="font-size: 16px;padding-left: 30px;">Devices running Android 7+ meet FIDO Alliance standards for biometric login..</p>
+                    <div class="row learnMore" style="width: 140px;height: 50px;left: 45px;position: relative;">
+                        <p class=" d-flex" class="card-text" style="color: #073042;font-size: 1.25rem;">
+                            <b>Learn more</b>
+                        </p>
+                        <svg id="arrow-to-top" style="transform: rotate(30deg);position:relative;top:-10px" width="30px" viewBox="0 0 16 16" class="bi bi-arrow-up-short" fill=" #073042" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <svg id="material-done" viewBox="0 0 24 24" fill="#3ddc84" width="20" style="margin-right: 10px;position:relative;top:0px">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path>
+                    </svg>
+                    <p class="text-p font-weight-bold" style="font-size: 16px;">GDPR</p>
+                    <p class="text-p" style="font-size: 16px;padding-left: 30px;">Android complies with the General Data Protection Regulation in Europe.</p>
+                    <div class="row learnMore" style="width: 140px;height: 50px;left: 45px;position: relative;">
+                        <p class=" d-flex" class="card-text" style="color: #073042;font-size: 1.25rem;">
+                            <b>Learn more</b>
+                        </p>
+                        <svg id="arrow-to-top" style="transform: rotate(30deg);position:relative;top:-10px" width="30px" viewBox="0 0 16 16" class="bi bi-arrow-up-short" fill=" #073042" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section stage7" style="padding-top: 100px;">
+        <div class="shape-pills-st7"></div>
+        <div class="row">
+            <div class="col-5 pl-7" style=" margin-top: 120px;">
+                <h1 class="mt-2 text-topic font-android" style="font-size: 88px;">Find out more about Android.</h1>
+            </div>
+            <div class="col-5" style=" margin-top: 140px;padding-right: 270px;left: 50px;">
+                <p class="text-p font-roboto">Datasheets about Android Enterprise Recommended. Videos about our latest security updates. You’ll find everything you want to know about Android for business in our resource center.
+                </p>
+                <div class="row learnMore2" style="width: 200px;height: 50px;left: 15px;position: relative;top:00px">
+                    <p class=" d-flex" class="card-text" style="color: #073042;font-size: 1.25rem;">
+                        <b>See all resources
+                        </b>
+                    </p>
+                    <svg id="arrow-to-right" style="transform: rotate(90deg);position:relative;top:-7px" width="30px" viewBox="0 0 16 16" class="bi bi-arrow-up-short" fill="#073042" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="album-st7" class="d-flex" style="position: relative;left: 280px;top:100px">
+                <div class="card" style="width: 518px;height: 554px;border: none;">
+                    <img class="card-img-top" src="files/images/enterprise-security/android-security.png" alt="Card image cap">
+                    <div class="card-body mt-3">
+                        <p class="font-android font-weight-bold" style="font-size: 50px; line-height: 100%;">Android security white paper</p>
+                        <div class="row learnMore" style="width: 190px;height: 50px;position: relative;margin: 80px 100px 0px 0px;">
+                            <p class=" d-flex" class="card-text" style="color: #073042;font-size: 1.25rem;">
+                                <b>Read the report</b>
+                            </p>
+                            <svg id="arrow-to-top" style="transform: rotate(30deg);position:relative;top:-10px" width="30px" viewBox="0 0 16 16" class="bi bi-arrow-up-short" fill=" #073042" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z" />
+                                </svg>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card" style="width: 518px;height: 554px;border: none;">
+                    <img class="card-img-top" src="files/images/enterprise-security/android-datasheet.jpg" alt="Card image cap">
+                    <div class="card-body mt-3">
+                        <p class="font-android font-weight-bold" style="font-size: 50px; line-height: 100%;">Android security datasheet</p>
+                        <div class="row learnMore" style="width: 220px;height: 50px;position: relative;margin: 80px 100px 0px 0px;">
+                            <p class=" d-flex" class="card-text" style="color: #073042;font-size: 1.25rem;">
+                                <b>Read the datasheet</b>
+                            </p>
+                            <svg id="arrow-to-top" style="transform: rotate(30deg);position:relative;top:-10px" width="30px" viewBox="0 0 16 16" class="bi bi-arrow-up-short" fill=" #073042" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z" />
+                                </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="width: 518px;height: 700px;border: none;">
+                    <div style="cursor: pointer;" onclick="openVideo('https://www.youtube.com/embed/Cb3yx070mRc')">
+                        <svg style="z-index: 3;position:absolute; left:200px;top:100px" class="modal-opener__play-icon" width="96" height="96" xmlns="http://www.w3.org/2000/svg">
+                            <g transform="translate(1 1)" fill="none" fill-rule="evenodd">
+                                <circle stroke="#FFF" fill-opacity=".7" fill="#FFF" cx="47" cy="47" r="47"></circle>
+                                <path class="play-icon"
+                                    d="M44 42.8v10.4c0 .8.9 1.3 1.5.8l8.1-5.2c.6-.4.6-1.3 0-1.7L45.5 42c-.6-.4-1.5 0-1.5.8z"
+                                    fill="#073042" fill-rule="nonzero"></path>
+                            </g>
+                        </svg>
+                        <img class="card-img-top" src="files/images/enterprise-security/android-protect.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body mt-3">
+                        <p class="font-android font-weight-bold" style="font-size: 50px; line-height: 100%;">Android Enterprise: security overview</p>
+                        <div onclick="openVideo('https://www.youtube.com/embed/Cb3yx070mRc')" class="row learnMore2" style="width: 200px;height: 50px;position: relative;top:00px; margin: 80px 100px 0px 0px;">
+                            <p class=" d-flex" class="card-text" style="color: #073042;font-size: 1.25rem;">
+                                <b>Watch the video</b>
+                            </p>
+                            <svg class="mt-5" id="arrow-to-right" style="transform: rotate(90deg);position:relative;top:-45px" width="30px" viewBox="0 0 16 16" class="bi bi-arrow-up-short" fill="#073042" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="progress" style="height: 5px; position: relative; top: 10px; z-index: 0; width: 1300px; left: 300px;">
+                <div class="progress-bar-line" role="progressbar" style="width: 80%; background-color: #404040" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div style="position: relative; left: 1530px; top:30px">
+                <button id="bt-left" class="" width="100px" style="border: none;
+                background: none;outline: none; opacity: 0.2;">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                    </svg></button>
+                <button id="bt-right" style="border: none;
+            background: none;outline: none;">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+    <button hidden onclick="closeVideo()" style="outline: none; z-index: 2000;" type="button" class="closeButton">
+        <span onclick="closeVideo()" class="icon-x"></span>
+    </button>
+    <div class="d-flex justify-content-center" style="z-index: 100;">
+        <div hidden class="stageBg"></div>
+
+        <iframe src="" hidden class="video-content" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+    </div>
+    <section style="margin-top: 10%; margin-bottom: -10%;">
+        <style>
+            .foot-box {
+                position: relative;
+                left: 22.5rem;
+                display: flex;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            
+            .foot-sub-box {
+                width: 13.5%;
+            }
+            
+            .footer {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+                display: block;
+                margin-bottom: 10px;
+            }
+            
+            .line {
+                width: 85%;
+                height: 1px;
+                background-color: black;
+                opacity: 0.5;
+                margin-top: 5px;
+                margin-bottom: 25px;
+            }
+            
+            .line1 {
+                width: 68%;
+                height: 1px;
+                background-color: black;
+                opacity: 0.5;
+                margin-top: 5rem;
+                margin-bottom: 25px;
+                position: relative;
+                left: 22.5rem;
+            }
+            
+            .footer-text {
+                font-size: 12px;
+                position: relative;
+                left: 22.5rem;
+                font-family: Arial, Helvetica, sans-serif;
+                margin-top: 10px
+            }
+            
+            .footer-sec {
+                position: relative;
+                border: none;
+                left: 30rem;
+                top: -2.2rem;
+                width: 100px;
+            }
+            
+            #ico-globe {
+                width: 20px;
+                height: 20px;
+                position: relative;
+                left: 29.8rem;
+                top: -2.3rem;
+            }
+            
+            .social-box {
+                position: relative;
+                left: 90rem;
+                top: -7.2rem;
+                display: flex;
+                margin-left: 20px;
+            }
+            
+            .social-icon {
+                width: 25px;
+                height: 25px;
+            }
+            
+            #ico-arrow-large {
+                width: 20px;
+                height: 20px;
+                transform: rotate(-45deg);
+            }
+        </style>
+        <div class="foot-box">
+            <div class="foot-sub-box">FOR DEVELOPERS
+                <div class="line"></div>
+                <a class="footer" href="">Developer Resources
+                    <svg id="ico-arrow-large" viewBox="0 0 24 24">
+                        <g fill="none" fill-rule="evenodd">
+                          <path d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59a.996.996 0 0 0 0-1.41l-6.58-6.6a.996.996 0 1 0-1.41 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z" fill="currentColor"></path>
+                        </g>
+                      </svg>
+                </a>
+                <a class="footer" href="">Android Studio and SDK
+                    <svg id="ico-arrow-large" viewBox="0 0 24 24">
+                        <g fill="none" fill-rule="evenodd">
+                          <path d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59a.996.996 0 0 0 0-1.41l-6.58-6.6a.996.996 0 1 0-1.41 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z" fill="currentColor"></path>
+                        </g>
+                      </svg>
+                </a>
+                <a class="footer" href="">Android Open Source Project
+                    <svg id="ico-arrow-large" viewBox="0 0 24 24">
+                        <g fill="none" fill-rule="evenodd">
+                          <path d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59a.996.996 0 0 0 0-1.41l-6.58-6.6a.996.996 0 1 0-1.41 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z" fill="currentColor"></path>
+                        </g>
+                      </svg>
+                </a>
+
+            </div>
+            <div class="foot-sub-box">FOR ENTERPRISE
+                <div class="line"></div>
+                <a class="footer" href="">Enterprise Overview</a>
+                <a class="footer" href="">Management</a>
+                <a class="footer" href="">Employees</a>
+                <a class="footer" href="">Security</a>
+                <a class="footer" href="">Enrollment</a>
+                <a class="footer" href="">Enterprise Devices</a>
+                <a class="footer" href="">Recommended</a>
+                <a class="footer" href="">Resources</a>
+                <a class="footer" href="">For Partners</a>
+                <a class="footer" href="">Solutions Directory</a>
+
+            </div>
+            <div class="foot-sub-box">FOR THE PRESS
+                <div class="line"></div>
+                <a class="footer" href="">    Android Blog
+                    <svg id="ico-arrow-large" viewBox="0 0 24 24">
+                        <g fill="none" fill-rule="evenodd">
+                          <path d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59a.996.996 0 0 0 0-1.41l-6.58-6.6a.996.996 0 1 0-1.41 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z" fill="currentColor"></path>
+                        </g>
+                      </svg>
+                </a>
+                <a class="footer" href="">    Enterprise Blog
+                    <svg id="ico-arrow-large" viewBox="0 0 24 24">
+                        <g fill="none" fill-rule="evenodd">
+                          <path d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59a.996.996 0 0 0 0-1.41l-6.58-6.6a.996.996 0 1 0-1.41 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z" fill="currentColor"></path>
+                        </g>
+                      </svg>
+                </a>
+                <a class="footer" href="">    Press Corner
+                    <svg id="ico-arrow-large" viewBox="0 0 24 24">
+                        <g fill="none" fill-rule="evenodd">
+                          <path d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59a.996.996 0 0 0 0-1.41l-6.58-6.6a.996.996 0 1 0-1.41 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z" fill="currentColor"></path>
+                        </g>
+                      </svg>
+                </a>
+                <a class="footer" href="">    Android is for everyone</a>
+                <a class="footer" href="">    Contact Press Team
+                    <svg id="ico-arrow-large" viewBox="0 0 24 24">
+                        <g fill="none" fill-rule="evenodd">
+                          <path d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59a.996.996 0 0 0 0-1.41l-6.58-6.6a.996.996 0 1 0-1.41 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z" fill="currentColor"></path>
+                        </g>
+                      </svg>
+                </a>
+                <a class="footer" href="">    How Google Play works</a>
+            </div>
+            <div class="foot-sub-box">THE ECOSYSTEM
+                <div class="line"></div>
+                <a class="footer" href="">Android Auto</a>
+                <a class="footer" href="">Android TV</a>
+                <a class="footer" href="">Wear OS by Google
+                    <svg id="ico-arrow-large" viewBox="0 0 24 24">
+                        <g fill="none" fill-rule="evenodd">
+                          <path d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59a.996.996 0 0 0 0-1.41l-6.58-6.6a.996.996 0 1 0-1.41 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z" fill="currentColor"></path>
+                        </g>
+                      </svg>
+                </a>
+            </div>
+            <div class="foot-sub-box">SUPPORT
+                <div class="line"></div>
+                <a class="footer" href="">Switch from iOS</a>
+                <a class="footer" href="">Android Help Center
+                    <svg id="ico-arrow-large" viewBox="0 0 24 24">
+                        <g fill="none" fill-rule="evenodd">
+                          <path d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59a.996.996 0 0 0 0-1.41l-6.58-6.6a.996.996 0 1 0-1.41 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z" fill="currentColor"></path>
+                        </g>
+                      </svg>
+                </a>
+                <a class="footer" href="">Android File Transfer</a>
+                <a class="footer" href="">Find My Device
+                    <svg id="ico-arrow-large" viewBox="0 0 24 24">
+                        <g fill="none" fill-rule="evenodd">
+                          <path d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59a.996.996 0 0 0 0-1.41l-6.58-6.6a.996.996 0 1 0-1.41 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z" fill="currentColor"></path>
+                        </g>
+                      </svg>
+                </a>
+                <a class="footer" href="">Join User Studies
+                    <svg id="ico-arrow-large" viewBox="0 0 24 24">
+                        <g fill="none" fill-rule="evenodd">
+                          <path d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59a.996.996 0 0 0 0-1.41l-6.58-6.6a.996.996 0 1 0-1.41 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z" fill="currentColor"></path>
+                        </g>
+                      </svg>
+                </a>
+            </div>
+
+        </div>
+        <div class="line1"></div>
+        <a href="" class="footer" style="position: relative; left: 22.5rem;">Privacy Policy</a>
+        <svg id="ico-globe" viewBox="0 0 24 24">
+            <g fill="none" fill-rule="evenodd">
+              <path d="M0 0h24v24H0z"></path>
+              <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95a15.65 15.65 0 0 0-1.38-3.56A8.03 8.03 0 0 1 18.92 8zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56A7.987 7.987 0 0 1 5.08 16zm2.95-8H5.08a7.987 7.987 0 0 1 4.33-3.56A15.65 15.65 0 0 0 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2s.07-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2z" fill="currentColor"></path>
+            </g>
+          </svg>
+        <select class="footer-sec">
+            <option>Dansk</option>
+            <option>Deutsch</option>
+            <option>English (Australia)</option>
+            <option>English (Canada)</option>
+            <option>English (Hong Kong)</option>
+            <option>English (Ireland)</option>
+            <option>English (India)</option>
+            <option>English (New Zealand)</option>
+            <option>English (United Kingdom)</option>
+            <optionn>English</option>
+            <option>Español</option>
+            <option>Español (México)</option>
+            <option>Français (Canada)</option>
+            <option>Français</option>
+            <option>Indonesia</option>
+            <option>Italiano</option>
+            <option>Nederlands</option>
+            <option>Norsk bokmål</option>
+            <option>Polski</option>
+            <option>Português (Brasil)</option>
+            <option>Svenska</option>
+            <option>Türkçe</option>
+            <option>Русский</option>
+            <option>हिन्दी</option>
+            <option>中文 (简体)</option>
+            <option>中文 (香港)</option>
+            <option>中文 (台灣)</option>
+            <option>日本語</option>
+            <option>한국어</option>
+        </select>
+        <div class="footer-text">Some features and devices may not be available in all countries. Subject to availability.</div>
+        <div class="footer-text">Some features and availability vary by OEM and/or device manufacturer.</div>
+        <div class="social-box-warp" style="display: flex;">
+            <div class="social-box">
+                <a href="">
+                    <div class="social-icon">
+                        <svg id="social-twitter" viewBox="0 0 48 48">
+                    <path d="M40.9331436,11.1940288 C42.810084,10.0689342 44.2513785,8.28745345 44.9301304,6.16481389 C43.1737706,7.20644208 41.2282743,7.96298797 39.1576594,8.37075777 C37.4993523,6.6040254 35.1368481,5.5 32.5223241,5.5 C27.501861,5.5 23.4316182,9.57008073 23.4316182,14.5902197 C23.4316182,15.3026824 23.5121673,15.9965069 23.6671068,16.661807 C16.1120205,16.2827237 9.4138018,12.6636857 4.93027879,7.16397957 C4.1478016,8.50657299 3.69951412,10.0681239 3.69951412,11.7340483 C3.69951412,14.8877815 5.30449997,17.6702107 7.74366355,19.3003175 C6.25342374,19.253155 4.85183659,18.8442507 3.62609611,18.1633918 C3.62544783,18.2013163 3.62544783,18.2394029 3.62544783,18.2776516 C3.62544783,22.6820841 6.75892216,26.3562262 10.9174935,27.1912143 C10.1546268,27.3989889 9.35156666,27.5100073 8.52241311,27.5100073 C7.93668971,27.5100073 7.36717338,27.4531205 6.81224341,27.3469642 C7.96894178,30.958547 11.3260736,33.586685 15.3039361,33.660103 C12.1928276,36.0981321 8.27314842,37.5514198 4.01425536,37.5514198 C3.28056144,37.5514198 2.5569159,37.5084711 1.8457498,37.4245184 C5.86866797,40.0037111 10.6469975,41.5085373 15.780586,41.5085373 C32.5010928,41.5085373 41.6444717,27.6568433 41.6444717,15.6443274 C41.6444717,15.2501715 41.6357199,14.8581225 41.6182163,14.4683426 C43.3941867,13.1866877 44.9354788,11.5855916 46.1542502,9.76262068 C44.5239813,10.4856179 42.7719974,10.974261 40.9331436,11.1940288 Z"></path>
+                  </svg>
+                    </div>
+                </a>
+            </div>
+            <div class="social-box">
+                <a href="">
+                    <div class="social-icon">
+                        <svg id="social-instagram" viewBox="0 0 48 48">
+                            <path d="M23.9,7.1c5.5,0,6.1,0,8.3,0.1c2,0.1,3.1,0.4,3.8,0.7c0.9,0.3,1.7,0.9,2.4,1.5c0.7,0.7,1.2,1.5,1.5,2.4 c0.3,0.7,0.6,1.8,0.7,3.8c0.1,2.2,0.1,2.8,0.1,8.3s0,6.1-0.1,8.3c-0.1,2-0.4,3.1-0.7,3.8c-0.7,1.8-2.1,3.2-3.9,3.9 c-0.7,0.3-1.8,0.6-3.8,0.7c-2.2,0.1-2.8,0.1-8.3,0.1s-6.1,0-8.3-0.1c-2-0.1-3.1-0.4-3.8-0.7c-0.9-0.3-1.7-0.9-2.4-1.5 c-0.7-0.7-1.2-1.5-1.5-2.4c-0.3-0.7-0.6-1.8-0.7-3.8c-0.1-2.2-0.1-2.8-0.1-8.3s0-6.1,0.1-8.3c0.1-2,0.4-3.1,0.7-3.8 c0.3-0.9,0.9-1.7,1.5-2.4c0.7-0.7,1.5-1.2,2.4-1.5c0.7-0.3,1.8-0.6,3.8-0.7C17.8,7.1,18.5,7.1,23.9,7.1 M23.9,3.4 c-5.6,0-6.3,0-8.5,0.1c-2.2,0.1-3.7,0.4-5,1C9.1,5,7.9,5.8,6.9,6.8c-1,1-1.9,2.3-2.4,3.6c-0.5,1.3-0.9,2.8-1,5 c-0.1,2.2-0.1,2.9-0.1,8.5s0,6.3,0.1,8.5c0.1,2.2,0.4,3.7,1,5C5,38.7,5.8,40,6.9,41c1,1,2.3,1.9,3.6,2.4c1.3,0.5,2.8,0.9,5,1 c2.2,0.1,2.9,0.1,8.5,0.1s6.3,0,8.5-0.1c2.2-0.1,3.7-0.4,5-1c2.8-1.1,4.9-3.2,6-6c0.5-1.3,0.9-2.8,1-5c0.1-2.2,0.1-2.9,0.1-8.5 s0-6.3-0.1-8.5c-0.1-2.2-0.4-3.7-1-5c-0.5-1.4-1.3-2.6-2.4-3.6c-1-1-2.3-1.9-3.6-2.4c-1.3-0.5-2.8-0.9-5-1 C30.2,3.4,29.5,3.4,23.9,3.4L23.9,3.4L23.9,3.4z"></path>
+                            <path d="M23.9,13.4c-5.8,0-10.5,4.7-10.5,10.5s4.7,10.5,10.5,10.5s10.5-4.7,10.5-10.5l0,0C34.5,18.1,29.8,13.4,23.9,13.4z M23.9,30.8c-3.8,0-6.8-3.1-6.8-6.8c0-3.8,3.1-6.8,6.8-6.8c3.8,0,6.8,3.1,6.8,6.8C30.8,27.7,27.7,30.8,23.9,30.8z"></path>
+                            <circle cx="34.9" cy="13" r="2.5"></circle>
+                          </svg>
+                    </div>
+                </a>
+            </div>
+            <div class="social-box">
+                <a href="">
+                    <div class="social-icon">
+                        <svg id="social-youtube" viewBox="0 0 48 48">
+                            <path d="M47.48 13.21s-.46-3.3-1.9-4.74c-1.82-1.92-3.86-1.92-4.8-2.04C34.08 5.94 24 6 24 6s-10.04-.06-16.74.42c-.92.12-2.96.12-4.78 2.04C1.04 9.9.56 13.2.56 13.2S.08 17.09 0 20.96v4.05c.08 3.88.56 7.75.56 7.75s.48 3.3 1.92 4.76c1.82 1.9 4.2 1.84 5.28 2.04 3.76.36 15.82.44 16.24.44 0 0 10.1.02 16.8-.46.92-.12 2.96-.12 4.78-2.04 1.44-1.44 1.92-4.74 1.92-4.74s.48-3.88.5-7.75v-4.05c-.04-3.87-.52-7.75-.52-7.75zM19.14 30V15.98L32 23.26 19.14 30z"></path>
+                            <path fill="none" d="M0 0h47.99v48H0z"></path>
+                          </svg>
+                    </div>
+                </a>
+            </div>
+            <div class="social-box">
+                <a href="">
+                    <div class="social-icon">
+                        <svg id="social-facebook" viewBox="0 0 20 20">
+                            <g fill="none" fill-rule="evenodd">
+                              <path d="M-2-2h24v24H-2z"></path>
+                              <path d="M20 10.1c0-5.5-4.5-10-10-10S0 4.5 0 10.1c0 5 3.7 9.1 8.4 9.9v-7H5.9v-2.9h2.5V7.9C8.4 5.4 9.9 4 12.2 4c1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6v1.9h2.8l-.4 2.8h-2.3v7c4.7-.8 8.4-4.9 8.4-9.9z" fill="currentColor"></path>
+                            </g>
+                          </svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <svg>
+        <symbol id="android-logo" viewBox="0 0 898 160">
+            <path fill="none" d="M2130-164h540v486h-540z" />
+            <path
+                d="M2224.2 210.9c-10.7 0-17.9 8.4-17.9 19.2s7.2 19.2 17.9 19.2 17.9-8.4 17.9-19.2-7.2-19.2-17.9-19.2m-2.4-11.9c8.6 0 15.8 4.4 19.2 9.2v-8h13.2v59.9h-10.1c-1.7 0-3-1.4-3-3v-5c-3.4 4.8-10.5 9.2-19.2 9.2-16.4 0-28.9-14-28.9-31.1s12.4-31.2 28.8-31.2M2269.2 200.2h13.2v8.1c3.6-6 10.4-9.3 18.2-9.3 13.9 0 22.9 9.8 22.9 25v36.1h-10.1c-1.7 0-3-1.4-3-3v-30.9c0-9.5-4.8-15.2-12.5-15.2-8.7 0-15.5 6.8-15.5 19.6v29.5h-10.1c-1.7 0-3-1.4-3-3v-56.9zM2365.1 210.9c-10.7 0-17.9 8.4-17.9 19.2s7.2 19.2 17.9 19.2 17.9-8.4 17.9-19.2-7.2-19.2-17.9-19.2m-2.4-11.9c8.6 0 15.8 4.4 19.2 9.2v-38h13.2v89.9H2385c-1.7 0-3-1.4-3-3v-5c-3.4 4.8-10.5 9.2-19.2 9.2-16.4 0-28.9-14-28.9-31.1s12.4-31.2 28.8-31.2M2410.1 200.2h13.2v10.7c2.3-6.8 9-11.3 15.8-11.3 1.7 0 3.4.1 5.1.5v13.5c-2.3-.7-4.2-1.1-6.6-1.1-7.5 0-14.4 6.4-14.4 18.3V260h-10.1c-1.7 0-3-1.4-3-3v-56.8zM2479.7 249c10.5 0 18-8.3 18-18.9 0-10.7-7.4-18.9-18-18.9-10.7 0-18.1 8.3-18.1 18.9.1 10.7 7.5 18.9 18.1 18.9m0 12.3c-17.7 0-31.4-13.8-31.4-31.1 0-17.4 13.7-31.2 31.4-31.2s31.4 13.8 31.4 31.2c0 17.3-13.6 31.1-31.4 31.1M2521.8 200.2h13.2v59.9h-10.1c-1.7 0-3-1.4-3-3v-56.9zm6.6-13.1c-4.8 0-8.9-4-8.9-8.9 0-4.8 4.1-8.7 8.9-8.7 4.9 0 8.7 4 8.7 8.7 0 4.9-3.8 8.9-8.7 8.9M2577.1 210.9c-10.7 0-17.9 8.4-17.9 19.2s7.2 19.2 17.9 19.2 17.9-8.4 17.9-19.2c-.1-10.8-7.2-19.2-17.9-19.2m-2.4-11.9c8.6 0 15.8 4.4 19.2 9.2v-38h13.2v89.9H2597c-1.7 0-3-1.4-3-3v-5c-3.4 4.8-10.5 9.2-19.2 9.2-16.4 0-28.9-14-28.9-31.1s12.4-31.2 28.8-31.2" />
+            <path
+                d="M2501.5-30.8l34.5-59.7c2-3.4.8-7.8-2.6-9.8s-7.8-.8-9.8 2.6l-34.9 60.4c-26.7-12.2-56.7-19-88.6-19-32 0-61.9 6.8-88.6 19l-34.9-60.4c-2-3.4-6.4-4.6-9.8-2.6s-4.6 6.4-2.6 9.8l34.5 59.7C2239.3 1.4 2198.9 61.3 2193 132h414c-5.9-70.7-46.4-130.6-105.5-162.8zM2304.7 73c-9.5 0-17.2-7.7-17.2-17.2s7.7-17.2 17.2-17.2 17.2 7.7 17.2 17.2-7.7 17.2-17.2 17.2zm190.6 0c-9.5 0-17.2-7.7-17.2-17.2s7.7-17.2 17.2-17.2 17.2 7.7 17.2 17.2-7.7 17.2-17.2 17.2z" />
+            <path fill="none" d="M-72-75H974v309H-72z" />
+            <path
+                d="M59.3 56.4c12.4 0 22.7 6.4 27.6 13.3V58.1h18.9v86.1H92.2c-3 0-5.4-2.4-5.4-5.4v-6.2c-4.8 7-15.1 13.4-27.5 13.4-23.6 0-41.5-20.2-41.5-44.8s17.9-44.8 41.5-44.8m3.4 17.2C47.4 73.6 37 85.7 37 101.2s10.3 27.6 25.7 27.6c15.3 0 25.7-12.1 25.7-27.6S78.1 73.6 62.7 73.6M127.3 58.1h19v11.7c5.2-8.6 15-13.4 26.2-13.4 20 0 32.9 14.1 32.9 36v51.8h-13.6c-3 0-5.4-2.4-5.4-5.4V95.5c0-13.6-6.9-21.9-17.9-21.9-12.6 0-22.2 9.8-22.2 28.2v42.4h-13.6c-3 0-5.4-2.4-5.4-5.4V58.1zM261.9 56.4c12.4 0 22.7 6.4 27.6 13.3V15.1h18.9v129.2h-13.6c-3 0-5.4-2.4-5.4-5.4v-6.2c-4.8 6.9-15.2 13.3-27.6 13.3-23.6 0-41.5-20.2-41.5-44.8.1-24.6 18-44.8 41.6-44.8m3.4 17.2c-15.3 0-25.7 12.1-25.7 27.6s10.3 27.6 25.7 27.6c15.3 0 25.7-12.1 25.7-27.6s-10.4-27.6-25.7-27.6M329.9 58.1h18.9v15.3c3.3-9.8 12.9-16.2 22.7-16.2 2.4 0 4.8.2 7.4.7v19.5c-3.3-1-6-1.6-9.5-1.6-10.9 0-20.7 9.1-20.7 26.4v42h-13.6c-3 0-5.4-2.4-5.4-5.4V58.1zM430.1 146c-25.5 0-45.1-19.8-45.1-44.8s19.6-44.8 45.1-44.8 45.1 19.8 45.1 44.8-19.6 44.8-45.1 44.8m0-17.6c15.2 0 25.8-11.9 25.8-27.2S445.2 74 430.1 74c-15.3 0-26 11.9-26 27.2s10.7 27.2 26 27.2M500 39.3c-6.9 0-12.7-5.7-12.7-12.7 0-6.9 5.9-12.6 12.7-12.6 7.1 0 12.6 5.7 12.6 12.6 0 7.1-5.5 12.7-12.6 12.7m-9.4 18.8h18.9v86.1H496c-3 0-5.4-2.4-5.4-5.4V58.1zM566.6 56.4c12.4 0 22.7 6.4 27.6 13.3V15.1h18.9v129.2h-13.6c-3 0-5.4-2.4-5.4-5.4v-6.2c-4.8 6.9-15.2 13.3-27.6 13.3-23.6 0-41.5-20.2-41.5-44.8.1-24.6 18-44.8 41.6-44.8m3.5 17.2c-15.3 0-25.7 12.1-25.7 27.6s10.3 27.6 25.7 27.6c15.3 0 25.7-12.1 25.7-27.6s-10.4-27.6-25.7-27.6" />
+        </symbol>
+        <symbol id='andy' viewBox="0 0 898 160">
+            <path class="logo-android__andy-icon"
+                d="m822.2 111.7c-5.3 0-9.6-4.3-9.6-9.6s4.3-9.6 9.6-9.6 9.6 4.3 9.6 9.6-4.3 9.6-9.6 9.6m-105.7 0c-5.3 0-9.6-4.3-9.6-9.6s4.3-9.6 9.6-9.6 9.6 4.3 9.6 9.6-4.3 9.6-9.6 9.6m109.1-57.6l19.2-33.1c1.1-1.9 0.4-4.3-1.5-5.4s-4.3-0.4-5.4 1.5l-19.4 33.5c-14.8-6.8-31.4-10.6-49.1-10.6s-34.4 3.8-49.2 10.5l-19.4-33.5c-1.1-1.9-3.5-2.6-5.4-1.5s-2.6 3.5-1.5 5.4l19.1 33.1c-32.8 17.9-55.3 51.1-58.6 90.4h229.7c-3.2-39.2-25.6-72.4-58.5-90.3" />
+        </symbol>
+    </svg>
+
+    <script src="files/js/enterprise/security.js"></script>
+    <script src="files/js/nav/nav.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+
+@media screen and (max-width: 1919px) and (max-height: 1079px) {
+body {
+    
+    zoom: 80%;   
+}
+}
+
+@font-face{
+    font-family: Android Euclid nav;
+    src: url(../../fonts/AndroidEuclid-Medium.otf);
+}
+nav, .nav-link, a{
+    font-family: Android Euclid nav;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 500;
+    color: black;
+}
+.navbar-brand{
+    font-family: 'Roboto';
+    font-size: 22px;
+    font-weight: 400;
+    color: black;
+    opacity: 1;
+}
+.nav-item{
+    width: 140px;
+    margin: 1px;
+}
+
+.nav-item2{
+    text-align: center;
+    width: 140px;
+    margin: 1px;
+}
+
+
+#a ul,#b ul{
+    margin-left: 0px!important;
+    position: relative;
+    left: 746.5px;
+}
+a:hover {
+    text-decoration: none;
+    color: #000;
+}
+.nav-but{
+    font-family: Android Euclid;
+    align-items: center;
+    width: 120px;
+    height: 45px;
+    background-color: #073042;
+    border-radius: 800px;
+    color: #fff;
+    display: inline-flex;
+    font-size: 12px;
+    font-weight: 500;
+    justify-content: center;
+    line-height: 14px;
+    padding: 12px 24px;
+    position: relative;
+    top: -4px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: color .2s linear;
+}
+.nav-but:hover{
+    color:#3ddc84;
+}
+#nav-animate {
+    position: relative; /* Make it stick/fixed */
+    top: 0; /* Stay on top */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+    padding-top: 0.8%;
+    padding-bottom: 0.8%;
+}
+  
+  /* Style the nav-animate links */
+#nav-animate a {
+    display: block;
+    text-decoration: none;
+}
+#subnav {
+    position: relative;
+    top: -70px; 
+    transition: top 0.3s; 
+}
+#sub1, #sub2, #sub3, #sub4, #sub5, #sub6, #sub7{
+    top: -50px;
+}  
+#subnav a {
+    display: block;
+    text-decoration: none;
+}
+#mProgress{
+    background-color: #D6DBDF;
+    width: 63%;
+    height: 2px;
+    margin-left: 20.5%;
+    position: relative;
+    transition: top 0.3s;
+    top: -45px;
+    z-index: 1;
+}
+#mProgress3{
+    background-color: #D6DBDF;
+    width: 63%;
+    height: 2px;
+    margin-left: 20.5%;
+    position: relative;
+    transition: top 0.3s;
+    top: 5px;
+    left: -40px;
+    z-index: 1100;
+    opacity: 0;
+}
+#mProgress2{
+    height: 1px; 
+    top: -45px; 
+    position: relative; 
+    z-index: 3;
+}
+#nav-point-1{
+    background-color: black;
+    width: 0%;
+    height: 4px;
+    top: -53px;
+    left: 2000px;
+    position: relative;
+    transition: top 0.3s;
+    z-index: 1;
+}
+#nav-point-2{
+    background-color: black;
+    width: 0%;
+    left: 2000px;
+    height: 4px;
+    top: -40px;
+    position: relative;
+    transition: top 0.3s;
+    z-index: 3;
+}
+
+.nav-point-android {
+    background-color: black;
+    width: 0%;
+    height: 4px;
+    top: -12px;
+    transition: top 0.3s;
+    z-index: 1;
+    align-items: center;
+    left: 5%;
+}
+
+
