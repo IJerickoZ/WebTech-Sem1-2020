@@ -1,0 +1,34 @@
+body {
+    font-family: 'Kanit', sans-serif;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border-style: dotted;
+}
+
+.button {
+    background-color: lightskyblue;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+select {
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+    border-style: dotted;
+}

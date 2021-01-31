@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="" id="myForm" onsubmit="return validateForm()" method="post" style="margin-left: 15%;margin-right: 15%;padding: 1px; margin-top: 3%">
+            <label for="idCard">รหัสบัตรประชาชน</label>
+            <input type="text" id="idCard" name="idCard" maxlength="13" placeholder="เลขบัตรประชาชน">
+            <select id="title" name="title" style="margin-bottom: 5px;">
+                <option value="000" selected="selected">++++++++++++ เลือกคำนำหน้าชื่อ ++++++++++++</option>
+                <option value="009">เด็กชาย</option>
+                <option value="001">เด็กหญิง</option>
+                <option value="002">นาย</option>
+                <option value="003">นางสาว</option>
+                <option value="004">นาง</option>
+              </select>
+            <label for="FirstName">ชื่อจริง</label><br>
+            <input type="text" id="FirstName" name="FirstName" placeholder="ชื่อ" minlength="2" maxlength="20" required><br>
+            <label for="LastName">นามสกุล</label><br>
+            <input type="text" id="FirstName" name="LastName" style="margin-bottom: 5px; " placeholder="นามสกุล" minlength="2" maxlength="30" required><br>
+            <label for="address">ที่อยู่</label><br>
+            <input type="text" id="address" name="address" placeholder="ที่อยู่ปัจจุบัน1" minlength="5" required><br>
+            <input type="text" id="address" name="address" placeholder="ที่อยู่ปัจจุบัน2" minlength="5" required>
+            <label for="Sub-District" style="width: 34%;display: inline-block">ตำบล</label><br>
+            <input type="text" id="Sub-District" name="Sub-District" placeholder="ตำบล" minlength="2" required><br>
+            <label for="District" style="width: 34%;display: inline-block">อำเภอ</label><br>
+            <input type="text" id="District" name="District" placeholder="อำเภอ"><br>
+            <label for="provide">จังหวัด</label><br>
+            <select id="provide" name="provide">
+                <option value="000" selected="selected">++++++++++++ เลือกจังหวัด ++++++++++++</option>
+                <option value="009">นนทบุรี</option>
+                <option value="001">กรุงเทพ</option>
+                <option value="002">นครปฐม</option>
+                <option value="003">เชียงใหม่</option>
+                <option value="004">ลำปาง</option>
+              </select>
+            <label for="postoffice" style="display: inline-block;width: 49%;">ไปรษณีย์</label><br>
+            <input type="text" id="postoffice" name="postoffice" placeholder="รหัสไปรษณีย์" minlength="5" maxlength="5" required>
+            <label for="phonenum">เบอร์โทรศัพท์</label><br>
+            <input type="text" id="phonenum" name="phonenum" placeholder="เบอร์โทรศัพท์" minlength="9" maxlength="10" required>
+            <button class="button" type="submit" style="margin-top: 10px; width: 100%;">Send</button>
+        </form>
+    </div>
+    </div>
+</body>
+<script src="/2/test.js" type="text/javascript "></script>
+
+</html>
