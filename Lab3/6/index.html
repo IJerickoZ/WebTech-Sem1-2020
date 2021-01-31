@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body onload="random()">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card m-5">
+                    <div class="card-header">
+                        <h3 class="card-title text-center">รางวัลสลากกินแบ่งรัฐบาล</h3>
+                        <p class="card-text text-center">งวดประจำวันที่ 1 กันยายน 2563</p>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title text-center">รางวัลที่ 1</h4>
+                        <h4 class="text-center" id="reward1"></h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p class="card-title text-center">เลขหน้า 3 ตัว</p>
+                                <p class="text-center" id="fontreward3"></p>
+                                <p class="card-title text-center">เลขท้าย 3 ตัว</p>
+                                <p class="text-center" id="backreward3"></p>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 class="card-title text-center">เลขท้าย 2 ตัว</h5>
+                                <h5 class="text-center" id="reward2"></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-center">
+                        <button onclick="random()" class="btn btn-warning" style="width: 100px;">สุ่มอีกรอบ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="script.js" rel="text/javascript"></script>
+
+</html>

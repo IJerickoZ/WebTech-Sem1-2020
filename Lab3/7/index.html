@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="card-deck" style="width: 80%;margin-top: 13%; margin-left: 10%;">
+                    <div class="col-sm">
+                        <form action="" id="myForm" onsubmit="return changeBG()">
+                            <div class="form-group"><br>
+                                <label for="code" style="display: inline-block;width: 25%;">Color Code</label>
+                                <input style="display: inline-block;width: 73%;" type="text" class="form-control" id="code" name="code" placeholder="#xxxxxx">
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit</button>
+                        </form>
+                    </div>
+                    <div class="card" id="aaa" style="width: 30%; overflow:auto;height: 300px;margin-top: 20px;font-size: 20px;display: inline-block;">
+                        <div class="card-body">
+                            <h5 class="card-title">Date: 24/8/2007</h5>
+                            <hr>
+                            <p class="card-text" style="font-size: 24px;">หัวข้อ </p>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                    <div class="card" id="bbb" style="width: 30%; overflow:auto;height: 300px;margin-top: 20px;display: inline-block;">
+                        <div class="card-body">
+                            <h5 class="card-title">Date: 24/8/2077</h5>
+                            <hr>
+                            <p class="card-text" style="font-size: 24px;">หัวข้อ </p>
+                        </div>
+                    </div>
+                    <div class="card" id="ccc" style="width: 30%; overflow:auto;height: 300px;margin-top: 20px;display: inline-block;font-size: 24px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Date: 24/8/2177</h5>
+                            <hr>
+                            <p class="card-text" style="font-size: 26px;">หัวข้อ </p>
+                            <p class="card-text">บอยคอตพลานุภาพซิตีไฮบริด เลกเชอร์เพทนาการ ซื่อบื้อเวสต์ เอ็นทรานซ์ซูมห่วยวาฟเฟิล เฟอร์นิเจอร์สปาเดี้ยงซีดานตุ๊ก ยิวบ๊วยแบคโฮออเดอร์โพลารอยด์ ซูเปอร์ม้งวัคค์ แตงกวาเกรด สันทนาการโรแมนติกโรแมนติกสะบึม ว้อยวอร์รูมจ๊าบสปอตบูติก
+                                เหี่ยวย่นบอยคอตไอซียู บอยคอตกรอบรูปยิม ช็อปเปอร์ ออเดอร์พาร์ทเนอร์มอนสเตอร์ภควัมบดีคอนเฟิร์ม หยวนซื่อบื้อ รีพอร์ท ฮวงจุ้ย ไมค์ตอกย้ำ ดีเจไฟลต์ลาเต้ เจลดอกเตอร์ วิป ชาร์จ มอคคา ชิฟฟอนเยอร์บีร่า กุนซือ ตะหงิด สไปเดอร์เอฟเฟ็กต์วัคค์แบรนด์จีดีพี
+                                แจม ไวกิ้งจูน ภคันทลาพาธศิลปากร มือถืออริยสงฆ์สังโฆล็อบบี้คณาญาติ กระดี๊กระด๊าแจ็กพ็อตโปรพรีเมียมซื่อบื้อ เทวาธิราชลิสต์สารขัณฑ์ซากุระโฟล์ค เยอบีร่าเดอะจูน แชมเปญคอรัปชันหมายปอง มอนสเตอร์พูลทริปแมกกาซีนซิตี ฮีโร่ หมิง คอนแท็คเรตติ้งโหงวเฮ้งแฮมเบอร์เกอร์
+                                แชมพูซะม็อบ นพมาศอมาตยาธิปไตยสตีล รายชื่ออิสรชนราเมน กราวนด์ สเตอริโอแล็บสไลด์อุปนายิกา ไพลินฟีดวิวตะหงิด โบตั๋นเพลซโอยัวะรอยัลตี้ แบนเนอร์นินจา หลินจือแคทวอล์คอพาร์ตเมนท์สะเด่า ดยุคซีรีส์หยวน ติ๋มลาเต้เคลื่อนย้าย เพรียวบางการันตีอุปทานยิม
+                                ไฮไลท์โง่เขลารีทัช ฮิตว้อดก้าอาข่ากราวนด์รวมมิตร โปรโมทพุทธศตวรรษทาวน์เฮาส์ เซอร์ แชมปิยองวอล์คซีนวัจนะ ปฏิสัมพันธ์โปรดักชั่นกู๋จิ๊กคอนเฟิร์ม สแตนดาร์ดรีไซเคิล พล็อตแฮปปี้เจล กระดี๊กระด๊า ไมเกรนไทยแลนด์เฟรม โรแมนติก รุสโซเซ่นไหว้ฟรุตราชบัณฑิตยสถาน
+                                กับดักไบโอแม็กกาซีนตะหงิด แคมปัสราชานุญาตคอนโดบร็อกโคลี อ่วมเรตติ้งออร์แกนคณาญาติ เซอร์วิวเซ็นทรัล กีวีอพาร์ทเมนท์หมวย มิลค์ ฟอยล์ ทรูโยเกิร์ตวอร์รูมซิมโฟนี่อีโรติก ด็อกเตอร์ริกเตอร์แบล็ก แฟร์สังโฆคอมเมนต์ เมาท์คอนโทรลเลกเชอร์ดิสเครดิตไบเบิล
+                                วีไอพี ป๊อกซัพพลายพาวเวอร์ เคลื่อนย้ายเซ่นไหว้พันธกิจป๋อหลอ ปาร์ตี้ซันตาคลอส ซีนนพมาศเปโซเทรนด์อินเตอร์ เทคโนคอร์รัปชั่นแดรี่เทรลเลอร์แฟล็ต</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="script.js" rel="text/javascript"></script>
+
+</html>
