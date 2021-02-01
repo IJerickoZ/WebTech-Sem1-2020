@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body class="p-3 mb-2 bg-light text-dark">
+    <h1>
+        <p class="text-center ">Food <span class="badge badge-warning">Hub</span></p>
+    </h1>
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-7">
+                <div class="card mb-3">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="https://www.renaicatering.com/wp-content/uploads/2018/01/%E0%B9%80%E0%B8%84%E0%B9%89%E0%B8%81%E0%B8%8B%E0%B8%B9%E0%B8%8A%E0%B8%B4%E0%B9%81%E0%B8%8B%E0%B8%A5%E0%B8%A1%E0%B8%AD%E0%B8%991%E0%B8%9B%E0%B8%AD%E0%B8%99%E0%B8%94%E0%B9%8C.jpg " class="card-img "
+                                alt="... ">
+                        </div>
+                        <div class="col-md-8 ">
+                            <div class="card-body ">
+                                <h5 class="card-title" name="salmon" id="salmon">Salmon Cake</h5>
+                                <p class="card-text ">This is a salmon cake</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit " class="btn btn-warning float-right d-inline-block" onclick='addSalmonCake()' id="btn1" value="salmonCake">Add</button>
+                </div>
+                <div class="card mb-3 ">
+                    <div class="row no-gutters ">
+                        <div class="col-md-4 ">
+                            <img src="https://cf.shopee.co.th/file/004159feec68d82bf3f12acfca71b2ec " class="card-img " alt="... ">
+                        </div>
+                        <div class="col-md-8 ">
+                            <div class="card-body ">
+                                <h5 class="card-title ">Foie Gras</h5>
+                                <p class="card-text ">This is a foie gras</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button " class="btn btn-warning float-right" onclick='addFoieGras()' id="btn2" value="foieGras">Add</button>
+                </div>
+                <div class="card mb-3 ">
+                    <div class="row no-gutters ">
+                        <div class="col-md-4 ">
+                            <img src="https://www.renaicatering.com/wp-content/uploads/2018/05/%E0%B8%8B%E0%B8%B9%E0%B8%8A%E0%B8%B4%E0%B8%9B%E0%B8%A5%E0%B8%B2%E0%B9%84%E0%B8%AB%E0%B8%A5.jpg" class="card-img " alt="... ">
+                        </div>
+                        <div class="col-md-8 ">
+                            <div class="card-body ">
+                                <h5 class="card-title ">Unagi Sushi</h5>
+                                <p class="card-text ">This is a unagi sushi</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button " class="btn btn-warning float-right " onclick='addUnagi()' id="btn3" value="unagi">Add</button>
+                </div>
+                <div class="card mb-3 ">
+                    <div class="row no-gutters ">
+                        <div class="col-md-4 ">
+                            <img src="data:image/jpeg;base64,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"
+                                class="card-img " alt="... ">
+                        </div>
+                        <div class="col-md-8 ">
+                            <div class="card-body ">
+                                <h5 class="card-title ">Salmon Roll</h5>
+                                <p class="card-text ">This is a salmon roll</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button " class="btn btn-warning float-right " onclick='addSalmonRoll()' id="btn4" value="salmonRoll">Add</button>
+                </div>
+            </div>
+
+            <div class="col ">
+                <table class="table bg-white text-dark" id="test2">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="bg-primary text-white ">Menu</th>
+                            <th scope="col" class="bg-primary text-white "></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js " integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN " crossorigin="anonymous "></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js " integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV " crossorigin="anonymous "></script>
+<script>
+    var salmonCake = 0,
+        salmonRoll = 0,
+        foieGras = 0,
+        unagi = 0;
+
+    function addSalmonCake() {
+        var row = document.createElement("tr");
+        var secret = document.getElementById("btn1").value;
+        if (salmonCake == 0) {
+            addRowText(row, "Salmon Cake");
+            salmonCake++;
+            addRow(row, salmonCake, secret);
+        } else {
+            document.getElementById(secret).innerHTML = salmonCake + 1;
+            salmonCake++;
+        }
+        document.getElementById("test2").appendChild(row);
+        return false;
+    }
+
+    function addSalmonRoll() {
+        var row = document.createElement("tr");
+        var secret = document.getElementById("btn4").value;
+        if (salmonRoll == 0) {
+            addRowText(row, "Salmon Roll");
+            salmonRoll++;
+            addRow(row, salmonRoll, secret);
+        } else {
+            document.getElementById(secret).innerHTML = salmonRoll + 1;
+            salmonRoll++;
+        }
+        document.getElementById("test2").appendChild(row);
+        return false;
+    }
+
+    function addUnagi() {
+        var row = document.createElement("tr");
+        var secret = document.getElementById("btn3").value;
+        if (unagi == 0) {
+            addRowText(row, "Unagi Shushi");
+            unagi++;
+            addRow(row, unagi, secret);
+        } else {
+            document.getElementById(secret).innerHTML = unagi + 1;
+            unagi++;
+        }
+        document.getElementById("test2").appendChild(row);
+        return false;
+    }
+
+    function addFoieGras() {
+        var row = document.createElement("tr");
+        var secret = document.getElementById("btn2").value;
+        if (foieGras == 0) {
+            addRowText(row, "Foie Gras");
+            foieGras++;
+            addRow(row, foieGras, secret);
+        } else {
+            document.getElementById(secret).innerHTML = foieGras + 1;
+            foieGras++;
+        }
+        document.getElementById("test2").appendChild(row);
+        return false;
+    }
+
+    function addRow(row, text, secret) {
+        var data = document.createElement("td");
+        data.setAttribute("id", secret);
+        data.appendChild(document.createTextNode(text));
+        row.appendChild(data);
+    }
+
+    function addRowText(row, text) {
+        var data = document.createElement("td");
+        data.appendChild(document.createTextNode(text));
+        row.appendChild(data);
+    }
+</script>
+
+</html>

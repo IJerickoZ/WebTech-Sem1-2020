@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body bg-light>
+    <div class="container mt-5">
+        <div class="media">
+            <div class="media-body">
+                <h2 class="mt-0">What's your name?</h2>
+                <button class="btn btn-outline-primary" onclick="set_Num(this)" value="1">reply</button>
+                <div class="media mt-3">
+                    <a class="mr-3" href="#">
+                    </a>
+                    <p class="media-body" id="test1" style="visibility:collapse"></p>
+                </div>
+            </div>
+        </div>
+        <div class="media">
+            <div class="media-body">
+                <h2 class="mt-0">How old are you ?</h2>
+                <button class="btn btn-outline-primary" onclick="set_Num(this)" value="2">reply</button>
+                <div class="media mt-3">
+                    <a class="mr-3" href="#">
+                    </a>
+                    <p class="media-body" id="test2" style="visibility:hidden"></p>
+                </div>
+            </div>
+        </div>
+        <div class="media">
+            <div class="media-body">
+                <h2 class="mt-0">What's your favorite hobby ?</h2>
+                <button class="btn btn-outline-primary" onclick="set_Num(this)" value="3">reply</button>
+                <div class="media mt-3">
+                    <a class="mr-3" href="#">
+                    </a>
+                    <p class="media-body" id="test3" style="visibility:hidden"></p>
+                </div>
+            </div>
+        </div>
+        <form onsubmit="return addReply()" style="width: 100%;" name="table">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" name="answer" id="box" placeholder="message">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js " integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN " crossorigin="anonymous "></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js " integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV " crossorigin="anonymous "></script>
+<script>
+    let select_num = 0;
+
+    function set_Num(value) {
+        select_num = parseInt(value.getAttribute('value'));
+    }
+
+    function addReply() {
+        let text = document.forms['table']['answer'].value;
+        if (select_num == 1) {
+            document.getElementById('test1').setAttribute("style", "visible")
+            document.getElementById('test1').innerHTML += "<li>" + text + "</li>";
+            document.getElementById('box').value = "";
+        } else if (select_num == 2) {
+            document.getElementById('test2').setAttribute("style", "visible")
+            document.getElementById('test2').innerHTML += "<li>" + text + "</li>";
+            document.getElementById('box').value = "";
+        } else if (select_num == 3) {
+            document.getElementById('test3').setAttribute("style", "visible")
+            document.getElementById('test3').innerHTML += "<li>" + text + "</li>";
+            document.getElementById('box').value = "";
+        }
+        return false;
+    }
+</script>
+
+</html>
