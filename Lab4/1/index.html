@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <center>
+        <p style="display: inline-block">V1</p>
+        <input type="text" id="test" /><br />
+        <p style="display: inline-block">V2</p>
+        <input type="text" id="test2" /><br />
+        <button type="submit" onclick="cal()">submit</button><br />
+        <p style="display: inline-block">Result:</p>
+        <p id="test3" style="display: inline-block"></p>
+        <p></p>
+      </center>
+      >
+    </div>
+  </body>
+  <script>
+    function cal() {
+      var num1 = document.getElementById("test").value;
+      var num2 = document.getElementById("test2").value;
+      result = parseInt(num1) + parseInt(num2);
+      document.getElementById("test3").innerHTML = result;
+    }
+  </script>
+</html>
