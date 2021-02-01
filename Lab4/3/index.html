@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="test" name="test" onsubmit="return reg()">
+        <input type="text" name="id" placeholder="รหัสนักศึกษา">
+        <input type="text" name="name" placeholder="ชื่อ">
+        <input type="text" name="lname" placeholder="นามสกุล">
+        <button type="submit">submit</button>
+    </form>
+    <table id="test2">
+        <tbody>
+            <tr>
+                <th>ลำดับ</th>
+                <th>รหัสนักศึกษา</th>
+                <th>ชื่อ</th>
+                <th>นามสกุล</th>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<script>
+    var num = 1;
+
+    function reg() {
+        var row = document.createElement("tr");
+        addRow(row, num);
+        addRow(row, document.forms["test"]["id"].value);
+        addRow(row, document.forms["test"]["name"].value);
+        addRow(row, document.forms["test"]["lname"].value);
+        document.getElementById("test2").appendChild(row);
+        num++;
+        return false;
+    }
+
+    function addRow(row, text) {
+        var data = document.createElement("td");
+        data.appendChild(document.createTextNode(text));
+        row.appendChild(data);
+    }
+</script>
+
+</html>

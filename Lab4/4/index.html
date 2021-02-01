@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            margin-top: 1%;
+            width: 800px;
+            overflow: hidden;
+        }
+        
+        .white {
+            border: 1px solid #000000;
+            float: left;
+            width: 100px;
+            height: 100px;
+            box-sizing: border-box;
+        }
+        
+        .black {
+            width: 100px;
+            height: 100px;
+            float: left;
+            border: 1px solid #000000;
+            background-color: #000000;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="test" onsubmit="return addBox()">
+        <input style="width: 250px;" type="text" placeholder="Enter Number" name="number">
+        <button type="submit">submit</button>
+    </form>
+    <div id="box"></div>
+    <script>
+        function addBox() {
+            var number = parseInt(document.forms["test"]["number"].value)
+            var boxes = "";
+            for (var i = 0, row = 1; i < number; row++) {
+                for (; i < number && i < 8 * row; i++) {
+                    if (i % 2 == row % 2) {
+                        boxes += '<div class="black"></div>';
+                    } else {
+                        boxes += '<div class="white"></div>';
+                    }
+                }
+            }
+            document.getElementById("box").innerHTML = boxes;
+            return false;
+        }
+    </script>
+</body>
+
+</html>
